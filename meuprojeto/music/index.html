@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Moeda</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        a {
+            color: black;
+            /* Set the color to any desired color, e.g., black, #000, etc. */
+            text-decoration: none;
+            /* This removes the underline from the link */
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: fixed; top: 0; left: 0; display: flex;">
+        <img src="cristóvão+colombo.png" width="55px">
+        <a href="http://localhost:3001/">
+            <h3 style="margin-right: 20px;margin-left: 10px">Temperatura</h3>
+        </a>
+        <a href="http://localhost:3000/">
+            <h3 style="margin-right: 10px;margin-left: 10px">Dinheiro convertor</h3>
+        </a>
+    </div>
+
+
+    <div class="container">
+        <form id="currencyForm">
+            <label for="amount">Qual musico:</label>
+            <input id="amount" step="0.01" required>
+            <button type="submit">Converter</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
