@@ -1,3 +1,15 @@
+FROM node:latest
+ENV APP_HOME /app
+RUN mkdir -pv $APP_HOME
+WORKDIR $APP_HOME
+ADD . $APP_HOME
+ENV NODE_ENV production
+ENV NPM_CONFIG_LOGLEVEL warn
+# ADD CUSTOM REGISTRY HERE IF REQUIRED
+# ENV CUSTOM_REGISTRY https://registry.npmjs.org/ 
+# RUN npm config set strict-ssl false
+# RUN npm config set registry $CUSTOM_REGISTRY
+RUN npm install
 const express = require('express');
 const app1 = express(); // Primeira instância do Express para a porta 3000
 const path = require('path');
