@@ -1,11 +1,11 @@
 const currencyForm = document.getElementById('currencyForm');
 const resultDiv = document.getElementById('result');
 
-currencyForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+const convertButton = document.querySelector('button[type="submit"]');
+convertButton.addEventListener('click', (event) => {
+    event.preventDefault(); // Evita o envio do formulário
 
     const amount = document.getElementById('amount').value;
-
     fetch(`/convert?amount=${encodeURIComponent(amount)}`)
         .then((response) => response.json())
         .then((data) => {
@@ -16,15 +16,15 @@ currencyForm.addEventListener('submit', (event) => {
             data.forEach((track) => {
                 const trackDiv = document.createElement('div');
                 trackDiv.innerHTML = `
-                        <p>Música: ${track.title}</p>
-                        <p>Artista: ${track.artist}</p>
-                        <p>Álbum: ${track.album}</p>
-                        <audio controls>
-                            <source src="${track.prev}" type="audio/mp3" />
-                            Seu navegador não suporta HTML5
-                        </audio>
-                        <hr>
-                    `;
+          <p>Música: ${track.title}</p>
+          <p>Artista: ${track.artist}</p>
+          <p>Álbum: ${track.album}</p>
+          <audio controls>
+            <source src="${track.prev}" type="audio/mp3" />
+            Seu navegador não suporta HTML5
+          </audio>
+          <hr>
+        `;
                 resultDiv.appendChild(trackDiv);
             });
         })

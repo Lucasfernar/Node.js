@@ -30,13 +30,8 @@ app1.get('/convert', async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 80;
-
+const PORT1 = process.env.PORT || 3000;
 
 app1.listen(PORT1, () => {
     console.log(`Servidor 1 ouvindo na porta ${PORT1}`);
 });
-
-
-
-

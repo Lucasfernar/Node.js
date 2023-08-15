@@ -1,0 +1,12 @@
+{
+    "name": "seu-projeto",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node serveror.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "axios": "^0.24.0",
+        "path": "^0.12.7"
+    }
+}

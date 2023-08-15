@@ -28,13 +28,19 @@
     </div>
 
 
+    <div class="container" style="margin-top: 100px;">
+        <div class="row">
+            <form id="currencyForm">
+                <label for="amount">Qual músico:</label>
+                <input id="amount" step="0.01" required>
+                <button type="submit">Converter</button>
+            </form>
+        </div>
+    </div>
     <div class="container">
-        <form id="currencyForm">
-            <label for="amount">Qual musico:</label>
-            <input id="amount" step="0.01" required>
-            <button type="submit">Converter</button>
-        </form>
-        <div id="result"></div>
+        <div class="row">
+            <div id="result"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
